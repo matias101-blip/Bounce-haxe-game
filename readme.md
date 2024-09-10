@@ -1,21 +1,22 @@
 
-# Table of Contents
+# &Iacute;ndice
 
-1.  [Bounce game - Haxe con flixel](#orgdce200a)
-    1.  [Creacion del proyecto](#org8fadbdc)
+1.  [Bounce game - Haxe con flixel](#org63f29ff)
+    1.  [Creacion del proyecto](#org6d70bd8)
 
 
-<a id="orgdce200a"></a>
+
+<a id="org63f29ff"></a>
 
 # Bounce game - Haxe con flixel
 
 Para este proyecto se usara como lenguaje de programacion
-el lenguaje de alto nivel &ldquo;Haxe&rdquo; con la libreria &ldquo;Flixel&rdquo;
+el lenguaje de alto nivel &laquo;Haxe&raquo; con la libreria &laquo;Flixel&raquo;
 
-El juego es una recreacion o inspiracion del juego &ldquo;Bounce Tales&rdquo;
+El juego es una recreacion o inspiracion del juego &laquo;Bounce Tales&raquo;
 
 
-<a id="org8fadbdc"></a>
+<a id="org6d70bd8"></a>
 
 ## Creacion del proyecto
 
