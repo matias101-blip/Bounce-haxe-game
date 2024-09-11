@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="48">
+ <tileset firstgid="1" source="assetLevel.tsx"/>
+ <objectgroup id="2" name="Plataforma">
+  <object id="24" gid="1" x="0" y="608" width="48" height="48"/>
+  <object id="25" gid="1" x="47.3333" y="608" width="48" height="48"/>
+  <object id="26" gid="1" x="95.3333" y="608.333" width="48" height="48"/>
+  <object id="27" gid="1" x="142.667" y="608" width="48" height="48"/>
+  <object id="28" gid="1" x="191" y="608" width="48" height="48"/>
+  <object id="29" gid="1" x="238.667" y="608" width="48" height="48"/>
+  <object id="30" gid="1" x="287.666" y="606.833" width="48" height="48"/>
+  <object id="31" gid="1" x="335" y="606.833" width="48" height="48"/>
+  <object id="32" gid="1" x="383" y="607.166" width="48" height="48"/>
+  <object id="33" gid="1" x="430.333" y="606.833" width="48" height="48"/>
+  <object id="34" gid="1" x="478.666" y="606.833" width="48" height="48"/>
+  <object id="35" gid="1" x="526.333" y="606.833" width="48" height="48"/>
+  <object id="36" gid="1" x="576.667" y="606.833" width="48" height="48"/>
+  <object id="37" gid="1" x="624" y="606.833" width="48" height="48"/>
+  <object id="38" gid="1" x="672" y="607.167" width="48" height="48"/>
+  <object id="39" gid="1" x="719.333" y="606.833" width="48" height="48"/>
+  <object id="40" gid="1" x="767.667" y="606.833" width="48" height="48"/>
+  <object id="41" gid="1" x="815.333" y="606.833" width="48" height="48"/>
+  <object id="42" gid="1" x="864.667" y="605.833" width="48" height="48"/>
+  <object id="43" gid="1" x="912" y="605.833" width="48" height="48"/>
+ </objectgroup>
+ <objectgroup id="3" name="ayudas">
+  <object id="1" x="800" y="800" width="80" height="80"/>
+ </objectgroup>
+</map>

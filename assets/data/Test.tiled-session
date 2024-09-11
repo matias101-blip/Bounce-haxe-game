@@ -1,0 +1,52 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Testeo1.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "Todos los archivos (*)",
+    "fileStates": {
+        "Testeo.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 111.66666666666666,
+                "y": 487.66666666666663
+            }
+        },
+        "Testeo1.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 303.3333333333333,
+                "y": 204.66666666666663
+            }
+        },
+        "assetLevel.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "/home/thehunter101/Documents/Developer-Software/haxe/Bounce-game/assets/images/Free/Terrain",
+    "map.height": 15,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": "1",
+    "map.width": 20,
+    "openFiles": [
+        "Testeo.tmx",
+        "Testeo1.tmx"
+    ],
+    "project": "Test.tiled-project",
+    "recentFiles": [
+        "Testeo.tmx",
+        "Testeo1.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}
