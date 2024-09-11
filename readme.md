@@ -1,83 +1,83 @@
 
 # &Iacute;ndice
 
-1.  [Bounce game - Haxe con flixel](#org0aa87ee)
-    1.  [Creacion del proyecto](#orgfd8ef13)
-        1.  [Flixel,Openfl, Lime](#org03fe361)
-    2.  [Testeo y construir](#org71a9644)
-    3.  [Desarrollo](#orgb3ff551)
-        1.  [Objetivo](#org151ba56)
-        2.  [Player](#org9449299)
+1.  [Bounce juego - Haxe con Flixel](#orgb832980)
+    1.  [Creación del proyecto](#org1de7699)
+        1.  [Flixel, OpenFL, Lime](#org04a3a89)
+    2.  [Testeo y construcción](#org65e3b36)
+    3.  [Desarrollo](#orgcb8a49d)
+    4.  [Objetivo](#orgf8bbd55)
+    5.  [Player](#org536ce5e)
 
 
 
-<a id="org0aa87ee"></a>
+<a id="orgb832980"></a>
 
-# Bounce game - Haxe con flixel
+# Bounce juego - Haxe con Flixel
 
-Para este proyecto se usara como lenguaje de programacion
-el lenguaje de alto nivel &laquo;Haxe&raquo; con la libreria &laquo;Flixel&raquo;
+Para este proyecto se usará como lenguaje de programación
+el lenguaje de alto nivel &laquo;Haxe&raquo; con la librería &laquo;Flixel&raquo;
 
-El juego es una recreacion o inspiracion del juego &laquo;Bounce Tales&raquo;
-
-
-<a id="orgfd8ef13"></a>
-
-## Creacion del proyecto
-
-El proyecto esta desarrollado en &laquo;Flixel&raquo; la cual es una libreria para
-el lenguaje &laquo;Haxe&raquo;, de esta forma se puede compilar para html5 (Web), neko(Para escritorio).
-
-Primero se instala el lenguaje &laquo;Haxe&raquo; en el siguiente link llevara a la pagina oficial
-de descarga [Haxe Download](https://orgmode.org/guide/Hyperlinks.html).
+El juego es una recreación o inspiración del juego &laquo;Bounce Tales&raquo;
 
 
-<a id="org03fe361"></a>
+<a id="org1de7699"></a>
 
-### Flixel,Openfl, Lime
+## Creación del proyecto
 
-Las librerias que se usaran son Flixel, Openfl, Lime
+El proyecto está desarrollado en &laquo;Flixel&raquo; la cual es una librería para
+el lenguaje &laquo;Haxe&raquo;, de esta forma se puede compilar para html5 (Web), Neko (para escritorio).
+
+Primero se instala el lenguaje &laquo;Haxe&raquo; en el siguiente enlace llevará a la página oficial
+de descarga [Haxe Download](https://haxe.org/download/).
+
+
+<a id="org04a3a89"></a>
+
+### Flixel, OpenFL, Lime
+
+Las librerías que se usarán son Flixel, OpenFL, Lime
 Las cuales se instalan de la siguiente forma:
 
-    #Instala la libreria de flixel
+    #Instala la librería de Flixel
     haxelib install flixel
     
-    #Instala la libreria de lime
+    #Instala la librería de Lime
     haxelib install lime
     
-    #INstala la libreria de openfl
+    #Instala la librería de OpenFL
     haxelib install openfl
 
-Con las libreria instalasdas podemos construir el proyect.
+Con las librerías instaladas podemos construir el proyecto.
 
 
-<a id="org71a9644"></a>
+<a id="org65e3b36"></a>
 
-## Testeo y construir
+## Testeo y construcción
 
-Para testear el juego es necesario de clonar el repositorio de github o bajar el zip,
+Para testar el juego es necesario clonar el repositorio de GitHub o bajar el ZIP,
 en una consola o terminal ejecutar:
 
-    #Para html5, este se ejecuta en el navegador.
+    #Para HTML5, este se ejecuta en el navegador.
     haxelib run lime test html5
     
-    #Para el escritotio, se ejecuta de forma nativa.
+    #Para el escritorio, se ejecuta de forma nativa.
     haxelib run lime test neko
 
 
-<a id="orgb3ff551"></a>
+<a id="orgcb8a49d"></a>
 
 ## Desarrollo
 
-A continuacion es este apartado se explicara el desarrollo del proyecto.
+A continuación, en este apartado se explicará el desarrollo del proyecto.
 
 
-<a id="org151ba56"></a>
+<a id="orgf8bbd55"></a>
 
-### Objetivo
+## Objetivo
 
 
-<a id="org9449299"></a>
+<a id="org536ce5e"></a>
 
-### Player
+## Player
 
