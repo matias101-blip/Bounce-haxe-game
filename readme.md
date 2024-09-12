@@ -1,18 +1,18 @@
 
 # &Iacute;ndice
 
-1.  [Bounce juego - Haxe con Flixel](#orga7f753e)
-    1.  [Creación del proyecto](#org6478c10)
-        1.  [Flixel, OpenFL, Lime](#org343b58b)
-    2.  [Testeo y construcción](#org110c58f)
-    3.  [Desarrollo del player](#org54bcf46)
-        1.  [Objetivos](#org999077e)
-        2.  [Player](#orgcfe0386)
-    4.  [Desarrollos de nivel](#orgcf98bc4)
+1.  [Bounce juego - Haxe con Flixel](#orge9d3d63)
+    1.  [Creación del proyecto](#org0a30717)
+        1.  [Flixel, OpenFL, Lime](#orgd258b8f)
+    2.  [Testeo y construcción](#org41a754e)
+    3.  [Desarrollo del player](#org1ef98e7)
+        1.  [Objetivos](#orgd7e2b35)
+        2.  [Player](#org823fcdd)
+    4.  [Desarrollos de nivel](#org3639176)
 
 
 
-<a id="orga7f753e"></a>
+<a id="orge9d3d63"></a>
 
 # Bounce juego - Haxe con Flixel
 
@@ -24,7 +24,7 @@ el lenguaje de alto nivel &laquo;Haxe&raquo; con la librería &laquo;Flixel&raqu
 El juego es una recreación o inspiración del juego &laquo;Bounce Tales&raquo;
 
 
-<a id="org6478c10"></a>
+<a id="org0a30717"></a>
 
 ## Creación del proyecto
 
@@ -35,7 +35,7 @@ Primero se instala el lenguaje &laquo;Haxe&raquo; en el siguiente enlace llevar�
 de descarga [Haxe Download](https://haxe.org/download/).
 
 
-<a id="org343b58b"></a>
+<a id="orgd258b8f"></a>
 
 ### Flixel, OpenFL, Lime
 
@@ -51,12 +51,10 @@ Las cuales se instalan de la siguiente forma:
     #Instala la librería de OpenFL
     haxelib install openfl
 
-    print("Hola")
-
 Con las librerías instaladas podemos construir el proyecto.
 
 
-<a id="org110c58f"></a>
+<a id="org41a754e"></a>
 
 ## Testeo y construcción
 
@@ -70,24 +68,24 @@ en una consola o terminal ejecutar:
     haxelib run lime test neko
 
 
-<a id="org54bcf46"></a>
+<a id="org1ef98e7"></a>
 
 ## Desarrollo del player
 
 A continuación, en este apartado se explicará el desarrollo del proyecto.
 
 
-<a id="org999077e"></a>
+<a id="orgd7e2b35"></a>
 
 ### Objetivos
 
 
-<a id="orgcfe0386"></a>
+<a id="org823fcdd"></a>
 
 ### Player
 
 
-<a id="orgcf98bc4"></a>
+<a id="org3639176"></a>
 
 ## Desarrollos de nivel
 
