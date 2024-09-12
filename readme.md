@@ -1,29 +1,28 @@
 
 # &Iacute;ndice
 
-1.  [Bounce juego - Haxe con Flixel](#orga1b5047)
-    1.  [Creación del proyecto](#org7597fab)
-        1.  [Flixel, OpenFL, Lime](#org20d187a)
-    2.  [Testeo y construcción](#org04cd037)
-    3.  [Desarrollo](#org1f6117d)
-    4.  [Objetivo](#org3673e9f)
-    5.  [Player](#orgdb7a011)
+1.  [Bounce juego - Haxe con Flixel](#org7201055)
+    1.  [Creación del proyecto](#orgf4e87c1)
+        1.  [Flixel, OpenFL, Lime](#org2f52771)
+    2.  [Testeo y construcción](#orga74c7a0)
+    3.  [Desarrollo](#org1913d64)
+    4.  [Objetivo](#orge132a5f)
+    5.  [Player](#orgf1bebd1)
 
 
 
-<a id="orga1b5047"></a>
+<a id="org7201055"></a>
 
 # Bounce juego - Haxe con Flixel
 
 ![img](./img/haxeflixel.png "HaxeFlixel Icon")
-
 Para este proyecto se usará como lenguaje de programación
 el lenguaje de alto nivel &laquo;Haxe&raquo; con la librería &laquo;Flixel&raquo;
 
 El juego es una recreación o inspiración del juego &laquo;Bounce Tales&raquo;
 
 
-<a id="org7597fab"></a>
+<a id="orgf4e87c1"></a>
 
 ## Creación del proyecto
 
@@ -34,7 +33,7 @@ Primero se instala el lenguaje &laquo;Haxe&raquo; en el siguiente enlace llevar�
 de descarga [Haxe Download](https://haxe.org/download/).
 
 
-<a id="org20d187a"></a>
+<a id="org2f52771"></a>
 
 ### Flixel, OpenFL, Lime
 
@@ -53,7 +52,7 @@ Las cuales se instalan de la siguiente forma:
 Con las librerías instaladas podemos construir el proyecto.
 
 
-<a id="org04cd037"></a>
+<a id="orga74c7a0"></a>
 
 ## Testeo y construcción
 
@@ -67,19 +66,19 @@ en una consola o terminal ejecutar:
     haxelib run lime test neko
 
 
-<a id="org1f6117d"></a>
+<a id="org1913d64"></a>
 
 ## Desarrollo
 
 A continuación, en este apartado se explicará el desarrollo del proyecto.
 
 
-<a id="org3673e9f"></a>
+<a id="orge132a5f"></a>
 
 ## Objetivo
 
 
-<a id="orgdb7a011"></a>
+<a id="orgf1bebd1"></a>
 
 ## Player
 
