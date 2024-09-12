@@ -1,29 +1,30 @@
 
 # &Iacute;ndice
 
-1.  [Bounce juego - Haxe con Flixel](#orgcd3ceed)
-    1.  [Creación del proyecto](#org0bac2a6)
-        1.  [Flixel, OpenFL, Lime](#org99be5a9)
-    2.  [Testeo y construcción](#org0b901c7)
-    3.  [Desarrollo del player](#org6c10186)
-        1.  [Objetivos](#org2bb2d16)
-        2.  [Player](#org7496f81)
-    4.  [Desarrollos de nivel](#org43a2dea)
+1.  [Bounce juego - Haxe con Flixel](#orga7f753e)
+    1.  [Creación del proyecto](#org6478c10)
+        1.  [Flixel, OpenFL, Lime](#org343b58b)
+    2.  [Testeo y construcción](#org110c58f)
+    3.  [Desarrollo del player](#org54bcf46)
+        1.  [Objetivos](#org999077e)
+        2.  [Player](#orgcfe0386)
+    4.  [Desarrollos de nivel](#orgcf98bc4)
 
 
 
-<a id="orgcd3ceed"></a>
+<a id="orga7f753e"></a>
 
 # Bounce juego - Haxe con Flixel
 
-![img](./img/haxeflixel.png  "HaxeFlixel Icon")
+![img](./img/haxeflixel.png "HaxeFlixel Icon")
+
 Para este proyecto se usará como lenguaje de programación
 el lenguaje de alto nivel &laquo;Haxe&raquo; con la librería &laquo;Flixel&raquo;
 
 El juego es una recreación o inspiración del juego &laquo;Bounce Tales&raquo;
 
 
-<a id="org0bac2a6"></a>
+<a id="org6478c10"></a>
 
 ## Creación del proyecto
 
@@ -34,7 +35,7 @@ Primero se instala el lenguaje &laquo;Haxe&raquo; en el siguiente enlace llevar�
 de descarga [Haxe Download](https://haxe.org/download/).
 
 
-<a id="org99be5a9"></a>
+<a id="org343b58b"></a>
 
 ### Flixel, OpenFL, Lime
 
@@ -50,10 +51,12 @@ Las cuales se instalan de la siguiente forma:
     #Instala la librería de OpenFL
     haxelib install openfl
 
+    print("Hola")
+
 Con las librerías instaladas podemos construir el proyecto.
 
 
-<a id="org0b901c7"></a>
+<a id="org110c58f"></a>
 
 ## Testeo y construcción
 
@@ -67,24 +70,24 @@ en una consola o terminal ejecutar:
     haxelib run lime test neko
 
 
-<a id="org6c10186"></a>
+<a id="org54bcf46"></a>
 
 ## Desarrollo del player
 
 A continuación, en este apartado se explicará el desarrollo del proyecto.
 
 
-<a id="org2bb2d16"></a>
+<a id="org999077e"></a>
 
 ### Objetivos
 
 
-<a id="org7496f81"></a>
+<a id="orgcfe0386"></a>
 
 ### Player
 
 
-<a id="org43a2dea"></a>
+<a id="orgcf98bc4"></a>
 
 ## Desarrollos de nivel
 
