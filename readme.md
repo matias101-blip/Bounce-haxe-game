@@ -1,18 +1,20 @@
 
 # &Iacute;ndice
 
-1.  [Bounce juego - Haxe con Flixel](#orge9d3d63)
-    1.  [Creación del proyecto](#org0a30717)
-        1.  [Flixel, OpenFL, Lime](#orgd258b8f)
-    2.  [Testeo y construcción](#org41a754e)
-    3.  [Desarrollo del player](#org1ef98e7)
-        1.  [Objetivos](#orgd7e2b35)
-        2.  [Player](#org823fcdd)
-    4.  [Desarrollos de nivel](#org3639176)
+1.  [Bounce juego - Haxe con Flixel](#org77fc481)
+    1.  [Creación del proyecto](#org4c17aa3)
+        1.  [Flixel, OpenFL, Lime](#org627cbd6)
+    2.  [Testeo y construcción](#orgf8dfddc)
+    3.  [Desarrollo del player](#org93121d4)
+        1.  [Objetivos](#org813030a)
+        2.  [Player](#org100f089)
+    4.  [Desarrollo de niveles](#org8f8d609)
+        1.  [Objetivos](#orgfdba3ad)
+        2.  [Desarrollo](#orge7a525e)
 
 
 
-<a id="orge9d3d63"></a>
+<a id="org77fc481"></a>
 
 # Bounce juego - Haxe con Flixel
 
@@ -24,7 +26,7 @@ el lenguaje de alto nivel &laquo;Haxe&raquo; con la librería &laquo;Flixel&raqu
 El juego es una recreación o inspiración del juego &laquo;Bounce Tales&raquo;
 
 
-<a id="org0a30717"></a>
+<a id="org4c17aa3"></a>
 
 ## Creación del proyecto
 
@@ -35,7 +37,7 @@ Primero se instala el lenguaje &laquo;Haxe&raquo; en el siguiente enlace llevar�
 de descarga [Haxe Download](https://haxe.org/download/).
 
 
-<a id="orgd258b8f"></a>
+<a id="org627cbd6"></a>
 
 ### Flixel, OpenFL, Lime
 
@@ -54,7 +56,7 @@ Las cuales se instalan de la siguiente forma:
 Con las librerías instaladas podemos construir el proyecto.
 
 
-<a id="org41a754e"></a>
+<a id="orgf8dfddc"></a>
 
 ## Testeo y construcción
 
@@ -68,24 +70,34 @@ en una consola o terminal ejecutar:
     haxelib run lime test neko
 
 
-<a id="org1ef98e7"></a>
+<a id="org93121d4"></a>
 
 ## Desarrollo del player
 
 A continuación, en este apartado se explicará el desarrollo del proyecto.
 
 
-<a id="orgd7e2b35"></a>
+<a id="org813030a"></a>
 
 ### Objetivos
 
 
-<a id="org823fcdd"></a>
+<a id="org100f089"></a>
 
 ### Player
 
 
-<a id="org3639176"></a>
+<a id="org8f8d609"></a>
 
-## Desarrollos de nivel
+## Desarrollo de niveles
+
+
+<a id="orgfdba3ad"></a>
+
+### Objetivos
+
+
+<a id="orge7a525e"></a>
+
+### Desarrollo
 
