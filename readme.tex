@@ -1,0 +1,89 @@
+% Created 2024-09-11 mié 19:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\author{Murcia Matias, Chacha Hernan, Gomez Emiro}
+\date{\today}
+\title{Documentacion del proyecto Bounce haxe}
+\hypersetup{
+ pdfauthor={Murcia Matias, Chacha Hernan, Gomez Emiro},
+ pdftitle={Documentacion del proyecto Bounce haxe},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.24)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Bounce juego - Haxe con Flixel}
+\label{sec:orgcfd5092}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=4cm]{./img/haxeflixel.png}
+\caption{\label{fig:HaxeFlixel}HaxeFlixel Icon}
+\end{figure}
+
+Para este proyecto se usará como lenguaje de programación
+el lenguaje de alto nivel \guillemotleft{}Haxe\guillemotright{} con la librería \guillemotleft{}Flixel\guillemotright{}
+
+El juego es una recreación o inspiración del juego \guillemotleft{}Bounce Tales\guillemotright{}
+
+\subsection{Creación del proyecto}
+\label{sec:org4b04bba}
+El proyecto está desarrollado en \guillemotleft{}Flixel\guillemotright{} la cual es una librería para
+el lenguaje \guillemotleft{}Haxe\guillemotright{}, de esta forma se puede compilar para html5 (Web), Neko (para escritorio).
+
+Primero se instala el lenguaje \guillemotleft{}Haxe\guillemotright{} en el siguiente enlace llevará a la página oficial
+de descarga \href{https://haxe.org/download/}{Haxe Download}.
+
+\subsubsection{Flixel, OpenFL, Lime}
+\label{sec:org1c868bc}
+Las librerías que se usarán son Flixel, OpenFL, Lime
+Las cuales se instalan de la siguiente forma:
+\begin{verbatim}
+#Instala la librería de Flixel
+haxelib install flixel
+
+#Instala la librería de Lime
+haxelib install lime
+
+#Instala la librería de OpenFL
+haxelib install openfl
+\end{verbatim}
+Con las librerías instaladas podemos construir el proyecto.
+
+\subsection{Testeo y construcción}
+\label{sec:org53c0995}
+Para testar el juego es necesario clonar el repositorio de GitHub o bajar el ZIP,
+en una consola o terminal ejecutar:
+\begin{verbatim}
+#Para HTML5, este se ejecuta en el navegador.
+haxelib run lime test html5
+
+#Para el escritorio, se ejecuta de forma nativa.
+haxelib run lime test neko
+\end{verbatim}
+\subsection{Desarrollo del player}
+\label{sec:org4d51fda}
+A continuación, en este apartado se explicará el desarrollo del proyecto.
+\subsubsection{Objetivos}
+\label{sec:orga025d57}
+\subsubsection{Player}
+\label{sec:org325fd3b}
+\subsection{Desarrollo de niveles}
+\label{sec:org9d97279}
+\end{document}
