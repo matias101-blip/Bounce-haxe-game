@@ -1,24 +1,20 @@
 package;
 
 import flixel.FlxG;
-import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.math.FlxPoint;
 
 class Player extends FlxSprite
 {
-    static inline var SPEED:Float = 100;
+	static inline var SPEED:Float = 150;
 	static inline var GRAVITY:Int = 800;
-
+	var run = new FlxSprite();
     public function new(x:Float = 0, y:Float = 0) {
 		super(x, y);
-		loadGraphic(AssetPaths.player__png, true, 80, 80);
+		run = loadGraphic("assets/images/gato-run.png", true, 81, 72);
         drag.x = drag.y = 800;
 		setFacingFlip(LEFT, true, false);
 		setFacingFlip(RIGHT, false, false);
-		setSize(80, 80);
-		animation.add("descanso", [0]);
-		animation.add("caminando", [0, 1, 2], 4);
+		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 8);
 		acceleration.y = GRAVITY;
 	}
 
@@ -33,7 +29,6 @@ class Player extends FlxSprite
 		// Mantén la velocidad de movimiento en la dirección actual
 		if (left || right)
 		{
-			var newAngle:Float = 0; // Usa el ángulo actual para la dirección de movimiento
 			if (left)
 			{
 				velocity.x = -SPEED;
@@ -45,12 +40,15 @@ class Player extends FlxSprite
 				facing = RIGHT;
 			}
 		}
+		else
+		{
+			run.animation.stop();
+		}
 		switch (facing)
 		{
 			case LEFT, RIGHT:
-				animation.play("caminando");
+				run.animation.play("Caminar");
 			default:
-				animation.play("descanso");
 		}
 	}
 
@@ -66,7 +64,7 @@ class Player extends FlxSprite
 	override function update(elapsed:Float)
 	{
 		Jump();
-		super.update(elapsed);
 		updateMovement();
+		super.update(elapsed);
 	}
 }
