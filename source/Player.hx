@@ -10,7 +10,7 @@ class Player extends FlxSprite
 	var run = new FlxSprite();
     public function new(x:Float = 0, y:Float = 0) {
 		super(x, y);
-		run = loadGraphic("assets/images/gato-run32x28.png", true, 32, 28); // 81x72
+		run = loadGraphic("assets/images/gato-run27x24.png", true, 27, 24); // 81x72
         drag.x = drag.y = 800;
 		setFacingFlip(LEFT, true, false);
 		setFacingFlip(RIGHT, false, false);
