@@ -14,6 +14,8 @@ class LevelTest extends FlxState
 	var BlockTilesStr:FlxTilemap;
 	function createLevel()
 	{
+		FlxG.mouse.visible = false;
+
 		player = new Player(20, 450);
 
 		final tilemap:TiledMap = new TiledMap("assets/data/TesteoPark.tmx");
@@ -26,7 +28,7 @@ class LevelTest extends FlxState
 		GroupLayersO.add(Bg);
 
 		// Se cargaran los edificios1
-		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos"];
+		final LayersE = ["Edificios1", "Edificios2", "Arboles"];
 		for (layer in LayersE)
 		{
 			var LayerObject:TiledObjectLayer = cast(tilemap.getLayer(layer));

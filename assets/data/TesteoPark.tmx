@@ -9,7 +9,7 @@
  <imagelayer id="5" name="Fondo" locked="1">
   <image source="../images/bg/bg-1.png" width="1024" height="640"/>
  </imagelayer>
- <objectgroup id="2" name="Edificios1" locked="1">
+ <objectgroup id="2" name="Edificios1">
   <object id="1" gid="1" x="0" y="512" width="576" height="324"/>
   <object id="2" gid="1" x="576" y="512" width="576" height="324"/>
  </objectgroup>
@@ -17,7 +17,7 @@
   <object id="3" gid="2" x="0" y="512" width="576" height="324"/>
   <object id="4" gid="2" x="574.667" y="512" width="576" height="324"/>
  </objectgroup>
- <objectgroup id="4" name="Arboles" locked="1">
+ <objectgroup id="4" name="Arboles">
   <object id="5" gid="4" x="1.33333" y="512" width="576" height="324"/>
   <object id="6" gid="4" x="574.667" y="512" width="576" height="324"/>
  </objectgroup>
