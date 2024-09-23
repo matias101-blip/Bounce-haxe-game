@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="29">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="42">
  <editorsettings>
   <export target="TesteoPark.csv" format="csv"/>
  </editorsettings>
@@ -45,7 +45,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="6" name="Objetos">
+ <objectgroup id="6" name="Objetos" locked="1">
   <object id="7" name="Arbol4" gid="13" x="703.667" y="512" width="175" height="190">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Tree4.png"/>
@@ -127,7 +127,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="Escaleras">
+ <objectgroup id="8" name="Escaleras" locked="1">
   <object id="27" gid="25" x="191" y="505.455" width="23" height="32">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Ladder1.png"/>
@@ -138,6 +138,20 @@
     <property name="ruta" value="assets/images/objects/Other/Ladder1.png"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup id="9" name="Hitbox">
+  <object id="29" x="191.333" y="483.958" width="21.3333" height="2.875"/>
+  <object id="31" x="191.708" y="433.438" width="21.3333" height="2.875"/>
+  <object id="32" x="191.833" y="457.063" width="21.3333" height="2.875"/>
+  <object id="33" x="191.583" y="409.938" width="21.3333" height="2.875"/>
+  <object id="34" x="191.583" y="385.938" width="21.3333" height="2.875"/>
+  <object id="35" x="191.458" y="362.188" width="21.3333" height="2.875"/>
+  <object id="36" x="191.958" y="266.688" width="21.3333" height="2.875"/>
+  <object id="37" x="191.833" y="338.313" width="21.3333" height="2.875"/>
+  <object id="38" x="191.583" y="314.313" width="21.3333" height="2.875"/>
+  <object id="39" x="191.958" y="290.313" width="21.3333" height="2.875"/>
+  <object id="40" x="191.958" y="242.938" width="21.3333" height="2.875"/>
+  <object id="41" x="191.958" y="224.063" width="21.3333" height="2.875"/>
  </objectgroup>
  <layer id="7" name="Tiles" width="32" height="20" locked="1">
   <data encoding="base64" compression="zlib">
