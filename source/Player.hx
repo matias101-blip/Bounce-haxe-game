@@ -14,7 +14,7 @@ class Player extends FlxSprite
         drag.x = drag.y = 800;
 		setFacingFlip(LEFT, true, false);
 		setFacingFlip(RIGHT, false, false);
-		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 8);
+		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 15);
 		acceleration.y = GRAVITY;
 	}
 
@@ -57,7 +57,7 @@ class Player extends FlxSprite
 		var jump:Bool = FlxG.keys.anyPressed([SPACE, W]);
 		if (jump && isTouching(DOWN))
 		{
-			velocity.y = -GRAVITY / 2.5;
+			velocity.y = -GRAVITY / 3.5; // Ajuste para el salto
 		}
 	}
 

@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Menu_principal.tsx",
+    "activeFile": "Nivel1_1.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -18,10 +18,43 @@
             "scaleInDock": 0.33,
             "scaleInEditor": 0.125
         },
-        "Menu_principal.tsx": {
-            "dynamicWrapping": true,
-            "scaleInDock": 1,
-            "scaleInEditor": 1
+        "Nivel 1.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 2032,
+                "y": 221.5
+            }
+        },
+        "Nivel1.1.csv": {
+            "expandedObjectLayers": [
+                2,
+                3,
+                6,
+                4
+            ],
+            "scale": 1,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 442,
+                "y": 238.5
+            }
+        },
+        "Nivel1.1.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 688,
+                "y": 605.9999999999999
+            }
+        },
+        "Nivel1_1.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 469.66666666666663,
+                "y": 489.66666666666663
+            }
         },
         "Objetos.tsx": {
             "dynamicWrapping": true,
@@ -33,36 +66,40 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
-        "Prueba.tmx": {
-            "scale": 0.75,
+        "Test2.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 0.8980468749999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 427.33333333333337,
-                "y": 447.33333333333337
+                "x": 408.66463679860806,
+                "y": 384.72379295345803
             }
         },
         "Testeo.tmx": {
             "expandedObjectLayers": [
                 3
             ],
-            "scale": 2,
+            "scale": 3,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": -39,
-                "y": 552.5
+                "x": 21.833333333333343,
+                "y": 668.1666666666666
             }
         },
         "TesteoPark.tmx": {
             "expandedObjectLayers": [
-                2,
+                4,
                 6,
-                3
+                3,
+                2
             ],
-            "scale": 0.75,
-            "selectedLayer": 4,
+            "scale": 1,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 194.66666666666669,
-                "y": 345.3333333333333
+                "x": 512.5,
+                "y": 319.5
             }
         },
         "park.tsx": {
@@ -71,26 +108,24 @@
             "scaleInEditor": 3
         }
     },
-    "last.exportedFilePath": "/home/thehunter101/Documents/Developer-Software/haxe/Bounce-game/assets/data",
+    "last.exportedFilePath": "C:/Users/USUARIO/Documents/GitHub/Bounce-haxe-game/assets/data",
     "last.imagePath": "/home/thehunter101/Documents/Developer-Software/haxe/Bounce-game/assets/images/objects/Other",
     "map.height": 15,
     "map.lastUsedExportFilter": "Archivos CSV (*.csv)",
     "map.lastUsedFormat": "tmx",
     "map.width": 20,
     "openFiles": [
-        "BG.tsx",
-        "Testeo.tmx",
         "TesteoPark.tmx",
-        "Menu_principal.tsx"
+        "Nivel1_1.tmx"
     ],
     "project": "Cat-Tales.tiled-project",
     "recentFiles": [
         "BG.tsx",
         "Testeo.tmx",
         "TesteoPark.tmx",
-        "Menu_principal.tsx",
-        "Prueba.tmx",
-        "Parque.tsx",
+        "Nivel1_1.tmx",
+        "InterfazUsuario.tsx",
+        "Menu.tmx",
         "Objetos.tsx",
         "Background.tsx",
         "park.tsx"

@@ -153,9 +153,9 @@
   <object id="40" x="191.958" y="242.938" width="21.3333" height="2.875"/>
   <object id="41" x="191.958" y="224.063" width="21.3333" height="2.875"/>
  </objectgroup>
- <layer id="7" name="Tiles" width="32" height="20" locked="1">
+ <layer id="7" name="Tiles" width="32" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUDBQoBOJqLJheQBELVqKj/cMZRAy0A6Bg1B2oYNQdCJAzwFgeiGWA2AYLdseBsaklB4cg2a8GxLJQGhljEyNGLhMHGxmD7FeH2m+EhG2xYJB4MR778NmDSx5kPwD3aSYY
+   eJxjYBgFo2AUDBQoBOJqLJheQBELVqKj/cMZROAQj6OrK3C7g95g1B2oYDC4I2eAsTwQywCxDRbsjgNjU0sODkGyXw2IZaE0MsYmRoxcJg42MgbZrw613wgJ22LBIPFiPPbhsweXPMh+AKLvJnY=
   </data>
  </layer>
 </map>
