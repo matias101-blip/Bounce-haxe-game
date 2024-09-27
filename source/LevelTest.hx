@@ -5,6 +5,7 @@ import flixel.addons.editors.tiled.TiledImageLayer;
 import flixel.addons.editors.tiled.TiledMap;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
+import lime.tools.Platform;
 import modules.LoadObjects.LoadObjects;
 
 class LevelTest extends FlxState
@@ -30,16 +31,20 @@ class LevelTest extends FlxState
 		// Se carga el mapa de tilesmap
 		BlockTilesStr = new FlxTilemap();
 		BlockTilesStr.loadMapFromCSV("assets/data/TesteoPark.csv", "assets/images/tiles/park.png", 32, 32);
+		FlxG.worldBounds.set(0, 0, tilemap.fullWidth, tilemap.fullHeight);
+		trace(tilemap.width, tilemap.fullWidth);
 		add(Bg);
 		add(objetosLoad);
 		add(BlockTilesStr);
 		add(player);
+		FlxG.camera.setScrollBoundsRect(0, 0, tilemap.fullWidth, tilemap.fullHeight);
+		FlxG.camera.follow(player, PLATFORMER);
+		FlxG.camera.zoom = 2;
 	}
 
 	override public function update(elapsed:Float)
 	{
 		FlxG.collide(player, BlockTilesStr);
-		FlxG.camera.follow(player);
 		super.update(elapsed);
 	}
 }
