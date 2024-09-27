@@ -1,5 +1,6 @@
 package;
 
+import LevelTest2;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;

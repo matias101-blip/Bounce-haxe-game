@@ -5,7 +5,7 @@ import flixel.FlxSprite;
 
 class Player extends FlxSprite
 {
-	static inline var SPEED:Float = 100;
+	static inline var SPEED:Float = 150;
 	static inline var GRAVITY:Int = 1100;
 	var run = new FlxSprite();
     public function new(x:Float = 0, y:Float = 0) {
@@ -14,7 +14,7 @@ class Player extends FlxSprite
         drag.x = drag.y = 800;
 		setFacingFlip(LEFT, true, false);
 		setFacingFlip(RIGHT, false, false);
-		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 10);
+		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 15);
 		acceleration.y = GRAVITY;
 	}
 
@@ -57,7 +57,7 @@ class Player extends FlxSprite
 		var jump:Bool = FlxG.keys.anyPressed([SPACE, W]);
 		if (jump && isTouching(DOWN))
 		{
-			velocity.y = -GRAVITY / 2.5;
+			velocity.y = -GRAVITY / 3.5; // Ajuste para el salto
 		}
 	}
 

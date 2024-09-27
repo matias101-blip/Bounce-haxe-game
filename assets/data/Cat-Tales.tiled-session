@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Menu.tmx",
+    "activeFile": "Nivel1_1.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -48,6 +48,14 @@
                 "y": 605.9999999999999
             }
         },
+        "Nivel1_1.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 469.66666666666663,
+                "y": 489.66666666666663
+            }
+        },
         "Objetos.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
@@ -82,10 +90,10 @@
         },
         "TesteoPark.tmx": {
             "expandedObjectLayers": [
-                2,
-                3,
+                4,
                 6,
-                4
+                3,
+                2
             ],
             "scale": 1,
             "selectedLayer": 5,
@@ -106,13 +114,13 @@
     "map.lastUsedFormat": "tmx",
     "map.width": 32,
     "openFiles": [
-        "Menu.tmx",
-        "InterfazUsuario.tsx",
-        "TesteoPark.tmx"
+        "TesteoPark.tmx",
+        "Nivel1_1.tmx"
     ],
     "project": "Cat-Tales.tiled-project",
     "recentFiles": [
         "TesteoPark.tmx",
+        "Nivel1_1.tmx",
         "InterfazUsuario.tsx",
         "Menu.tmx",
         "Objetos.tsx",

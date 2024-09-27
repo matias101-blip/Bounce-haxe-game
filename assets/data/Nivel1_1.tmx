@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="33">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="34">
  <editorsettings>
   <export target="Nivel1_1.csv" format="csv"/>
  </editorsettings>
  <tileset firstgid="1" source="BG.tsx"/>
  <tileset firstgid="5" source="Objetos.tsx"/>
  <tileset firstgid="27" source="Parque.tsx"/>
- <imagelayer id="5" name="Fondo" visible="0" locked="1">
+ <imagelayer id="5" name="Fondo" locked="1">
   <image source="../images/bg/bg-1.png" width="1024" height="640"/>
  </imagelayer>
- <objectgroup id="2" name="Edificios1" visible="0" locked="1">
+ <objectgroup id="2" name="Edificios1" locked="1">
   <object id="1" gid="1" x="0" y="512" width="576" height="324">
    <properties>
     <property name="ruta" value="assets/images/bg/2.png"/>
@@ -21,7 +21,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="3" name="Edificios2" visible="0" locked="1">
+ <objectgroup id="3" name="Edificios2" locked="1">
   <object id="3" gid="2" x="0" y="512" width="576" height="324">
    <properties>
     <property name="ruta" value="assets/images/bg/3.png"/>
@@ -33,7 +33,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="4" name="Arboles" visible="0" locked="1">
+ <objectgroup id="4" name="Arboles" locked="1">
   <object id="5" gid="4" x="1.33333" y="512" width="576" height="324">
    <properties>
     <property name="ruta" value="assets/images/bg/5.png"/>
@@ -88,37 +88,27 @@
     <property name="ruta" value="assets/images/objects/Other/Tree4.png"/>
    </properties>
   </object>
-  <object id="25" gid="20" x="319.609" y="513.093" width="32" height="25">
+  <object id="25" gid="20" x="319.791" y="514.002" width="32" height="25">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Box.png"/>
    </properties>
   </object>
-  <object id="26" gid="20" x="351.609" y="513.093" width="32" height="25">
+  <object id="26" gid="20" x="351.791" y="513.951" width="32" height="25">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Box.png"/>
    </properties>
   </object>
-  <object id="27" gid="20" x="352.109" y="491.093" width="32" height="25">
+  <object id="27" gid="20" x="370.326" y="490.247" width="32" height="25">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Box.png"/>
    </properties>
   </object>
-  <object id="28" gid="20" x="351.609" y="471.593" width="32" height="25">
+  <object id="28" gid="20" x="338.467" y="490.21" width="32" height="25">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Box.png"/>
    </properties>
   </object>
-  <object id="29" gid="20" x="320.109" y="503.093" width="32" height="25">
-   <properties>
-    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
-   </properties>
-  </object>
-  <object id="30" gid="20" x="383.609" y="512.093" width="32" height="25">
-   <properties>
-    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
-   </properties>
-  </object>
-  <object id="31" gid="20" x="383.609" y="503.093" width="32" height="25">
+  <object id="30" gid="20" x="383.427" y="513.002" width="32" height="25">
    <properties>
     <property name="ruta" value="assets/images/objects/Other/Box.png"/>
    </properties>
@@ -128,10 +118,15 @@
     <property name="ruta" value="assets/images/objects/Other/Tree2.png"/>
    </properties>
   </object>
+  <object id="33" gid="20" x="355.585" y="466.575" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="7" name="Tiles" width="32" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMNRBwRCwlxpuTAXiNCBOJ1M/uW6wIFMfNYAFGk0tkDPAWB6IZYDYBgt2x4GxqSUHhyDZrwbEslAaGWMTI0YuEwcbGYPsV4fab4SEbbFgkHgxHvvw2YNLHmQ/ALsWJFs=
+   eJxjYBgFo2AUjIJRMNRBwRCwlxpuTAXiNCBOJ1P/QIXTYAQ5A4zlgVgGiG2wYHccGJtacnAIkv1qQCwLpZExNjFi5DJxsJExyH51qP1GSNgWCwaJF+OxD589uORB9gMAF+cjsw==
   </data>
  </layer>
 </map>
