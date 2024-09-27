@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="33">
+ <editorsettings>
+  <export target="Nivel1_1.csv" format="csv"/>
+ </editorsettings>
+ <tileset firstgid="1" source="BG.tsx"/>
+ <tileset firstgid="5" source="Objetos.tsx"/>
+ <tileset firstgid="27" source="Parque.tsx"/>
+ <imagelayer id="5" name="Fondo" visible="0" locked="1">
+  <image source="../images/bg/bg-1.png" width="1024" height="640"/>
+ </imagelayer>
+ <objectgroup id="2" name="Edificios1" visible="0" locked="1">
+  <object id="1" gid="1" x="0" y="512" width="576" height="324">
+   <properties>
+    <property name="ruta" value="assets/images/bg/2.png"/>
+   </properties>
+  </object>
+  <object id="2" gid="1" x="576" y="512" width="576" height="324">
+   <properties>
+    <property name="ruta" value="assets/images/bg/2.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="Edificios2" visible="0" locked="1">
+  <object id="3" gid="2" x="0" y="512" width="576" height="324">
+   <properties>
+    <property name="ruta" value="assets/images/bg/3.png"/>
+   </properties>
+  </object>
+  <object id="4" gid="2" x="574.667" y="512" width="576" height="324">
+   <properties>
+    <property name="ruta" value="assets/images/bg/3.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="Arboles" visible="0" locked="1">
+  <object id="5" gid="4" x="1.33333" y="512" width="576" height="324">
+   <properties>
+    <property name="ruta" value="assets/images/bg/5.png"/>
+   </properties>
+  </object>
+  <object id="6" gid="4" x="574.667" y="512" width="576" height="324">
+   <properties>
+    <property name="ruta" value="assets/images/bg/5.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Objetos">
+  <object id="8" gid="16" x="2" y="512" width="27" height="16">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Stones/3.png"/>
+   </properties>
+  </object>
+  <object id="9" gid="16" x="930.5" y="512" width="27" height="16">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Stones/3.png"/>
+   </properties>
+  </object>
+  <object id="10" gid="22" x="160" y="512" width="48" height="22">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Benches/2.png"/>
+   </properties>
+  </object>
+  <object id="11" gid="21" x="82" y="513" width="45" height="22">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Benches/1.png"/>
+   </properties>
+  </object>
+  <object id="12" gid="10" x="116" y="515" width="62" height="103">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Tree1.png"/>
+   </properties>
+  </object>
+  <object id="13" gid="11" x="20" y="512" width="124" height="129">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Tree2.png"/>
+   </properties>
+  </object>
+  <object id="20" gid="10" x="835" y="511" width="62" height="103">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Tree1.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="Colision">
+  <object id="24" gid="13" x="703.276" y="512.093" width="175" height="190">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Tree4.png"/>
+   </properties>
+  </object>
+  <object id="25" gid="20" x="319.609" y="513.093" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="26" gid="20" x="351.609" y="513.093" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="27" gid="20" x="352.109" y="491.093" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="28" gid="20" x="351.609" y="471.593" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="29" gid="20" x="320.109" y="503.093" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="30" gid="20" x="383.609" y="512.093" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="31" gid="20" x="383.609" y="503.093" width="32" height="25">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Box.png"/>
+   </properties>
+  </object>
+  <object id="32" gid="11" x="674.942" y="513.093" width="124" height="129">
+   <properties>
+    <property name="ruta" value="assets/images/objects/Other/Tree2.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="7" name="Tiles" width="32" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNRBwRCwlxpuTAXiNCBOJ1M/uW6wIFMfNYAFGk0tkDPAWB6IZYDYBgt2x4GxqSUHhyDZrwbEslAaGWMTI0YuEwcbGYPsV4fab4SEbbFgkHgxHvvw2YNLHmQ/ALsWJFs=
+  </data>
+ </layer>
+</map>

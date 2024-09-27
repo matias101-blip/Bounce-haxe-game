@@ -10,6 +10,7 @@ import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxCollision;
+import modules.LoadObjects.LoadObjects;
 
 class LevelTest2 extends FlxState
 {
@@ -21,35 +22,31 @@ class LevelTest2 extends FlxState
         //Se carga el jugadosr
         player= new Player(0,0);
         //Se caraga el arch del mapa (TODO) tmx
-        final tilemap:TiledMap = new TiledMap("assets/data/Nivel1.1.tmx");
+        final tilemap:TiledMap = new TiledMap("assets/data/Nivel1_1.tmx");
         //obtengo el fondo 
         var Image:TiledImageLayer = cast(tilemap.getLayer("Fondo"));
         var bg:FlxSprite = new FlxSprite(Image.x,Image.y);
         bg.loadGraphic(StringTools.replace(Image.imagePath,"..","assets"));
 
         //Carga de objetos 
-        var objetos:TiledObjectLayer = cast(tilemap.getLayer("Arboles"));
-        var grupoObjetos:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
-        for (items in objetos.objects){
-            var itemSprite:FlxSprite = new FlxSprite();
-            itemSprite.loadGraphic("assets/images/bg/5.png");
-            itemSprite.setPosition(items.x,items.y);
-            itemSprite.setSize(items.width,items.height);
-            grupoObjetos.add(itemSprite);
-
-        }
+        
+        final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos"];
+		var objetosLoad = LoadObjects("assets/data/Nivel1_1.tmx", LayersE);
 
         BlockTilesStr = new FlxTilemap();
-        BlockTilesStr.loadMapFromCSV("assets/data/Nivel1.1.csv","assets/images/tiles/park.png",32,32);
-
+        BlockTilesStr.loadMapFromCSV("assets/data/Nivel1_1.csv","assets/images/tiles/park.png",32,32);
+        FlxG.worldBounds.set(0, 0, tilemap.fullWidth, tilemap.fullHeight);
 
 		super.create();
 		// Cargar el jugador
-		
         add(bg);
-        add(grupoObjetos);
+        add(objetosLoad);
         add(BlockTilesStr);
         add(player);
+
+        FlxG.camera.setScrollBoundsRect(0, 0, tilemap.fullWidth, tilemap.fullHeight);
+		FlxG.camera.follow(player, PLATFORMER);
+		FlxG.camera.zoom = 2;
         
 	}
 
