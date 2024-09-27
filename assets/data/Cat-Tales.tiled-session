@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Menu.tmx",
+    "activeFile": "Menu_principal.tsx",
     "expandedProjectPaths": [
         "."
     ],
@@ -18,34 +18,19 @@
             "scaleInDock": 0.33,
             "scaleInEditor": 0.125
         },
-        "GUI.tsx": {
-            "scaleInDock": 1,
-            "scaleInEditor": 2
-        },
-        "InterfazUsuario.tsx": {
+        "Menu_principal.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
-        "Menu.tmx": {
-            "expandedObjectLayers": [
-                3
-            ],
-            "scale": 0.5,
-            "selectedLayer": 3,
-            "viewCenter": {
-                "x": 433,
-                "y": 544
-            }
-        },
         "Objetos.tsx": {
             "dynamicWrapping": true,
-            "scaleInDock": 0.25,
+            "scaleInDock": 1,
             "scaleInEditor": 0.5
         },
         "Parque.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 2,
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "Prueba.tmx": {
@@ -69,18 +54,15 @@
         },
         "TesteoPark.tmx": {
             "expandedObjectLayers": [
-                3,
-                8,
-                4,
-                9,
+                2,
                 6,
-                2
+                3
             ],
-            "scale": 0.5,
+            "scale": 0.75,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 451,
-                "y": 306
+                "x": 194.66666666666669,
+                "y": 345.3333333333333
             }
         },
         "park.tsx": {
@@ -91,26 +73,26 @@
     },
     "last.exportedFilePath": "/home/thehunter101/Documents/Developer-Software/haxe/Bounce-game/assets/data",
     "last.imagePath": "/home/thehunter101/Documents/Developer-Software/haxe/Bounce-game/assets/images/objects/Other",
+    "map.height": 15,
     "map.lastUsedExportFilter": "Archivos CSV (*.csv)",
     "map.lastUsedFormat": "tmx",
-    "map.width": 32,
+    "map.width": 20,
     "openFiles": [
-        "Menu.tmx",
-        "InterfazUsuario.tsx",
-        "TesteoPark.tmx"
+        "BG.tsx",
+        "Testeo.tmx",
+        "TesteoPark.tmx",
+        "Menu_principal.tsx"
     ],
     "project": "Cat-Tales.tiled-project",
     "recentFiles": [
+        "BG.tsx",
+        "Testeo.tmx",
         "TesteoPark.tmx",
-        "InterfazUsuario.tsx",
-        "Menu.tmx",
+        "Menu_principal.tsx",
+        "Prueba.tmx",
+        "Parque.tsx",
         "Objetos.tsx",
         "Background.tsx",
-        "BG.tsx",
-        "Parque.tsx",
-        "GUI.tsx",
-        "Prueba.tmx",
-        "Testeo.tmx",
         "park.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
@@ -118,5 +100,5 @@
         "height": 32,
         "width": 32
     },
-    "tileset.type": 0
+    "tileset.type": 1
 }
