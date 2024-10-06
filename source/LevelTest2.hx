@@ -7,9 +7,11 @@ import flixel.addons.editors.tiled.TiledImageLayer;
 import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledObject;
 import flixel.addons.editors.tiled.TiledObjectLayer;
+import flixel.addons.text.FlxTypeText;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxCollision;
+import lime.tools.Platform;
 import modules.LoadObjects.LoadObjects;
 import modules.LoadObjects.LoadObjectsTouch;
 
@@ -29,18 +31,24 @@ class LevelTest2 extends FlxState
         //obtengo el fondo 
         var Image:TiledImageLayer = cast(tilemap.getLayer("Fondo"));
         var bg:FlxSprite = new FlxSprite(Image.x,Image.y);
+		bg.setPosition();
         bg.loadGraphic(StringTools.replace(Image.imagePath,"..","assets"));
 
         //Carga de objetos 
         
-        final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos"]; // Arreglo con las capas que se cargaran, tener orden
+		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos"]; // Arreglo con las capas que se cargaran, tener orden
 		var objetosLoad = LoadObjects("assets/data/Nivel1_1.tmx", LayersE); // Funcion que carga objetos en segundo plano
 		final CollisionObj = ["Colision"];
 		C_ObjetosLoad = LoadObjectsTouch("assets/data/Nivel1_1.tmx", CollisionObj);// Funcion que carga objetos, en colision.
 
         BlockTilesStr = new FlxTilemap();
         BlockTilesStr.loadMapFromCSV("assets/data/Nivel1_1.csv","assets/images/tiles/park.png",32,32);
-        FlxG.worldBounds.set(0, 0, tilemap.fullWidth, tilemap.fullHeight);
+		FlxG.worldBounds.set(0, 0, tilemap.fullWidth, tilemap.fullHeight); // Limites del mundo, todo lo que esta en el limite se puede ver y mover
+
+		// Carga de dialogo.
+		var Text:FlxTypeText = new FlxTypeText(20, 450, 130, "Hola este es mi texto");
+		Text.prefix = "Matias: ";
+		Text.start();
 
 		super.create();
 		// Cargar el jugador
@@ -48,6 +56,7 @@ class LevelTest2 extends FlxState
         add(objetosLoad);
 		add(C_ObjetosLoad);
         add(BlockTilesStr);
+		add(Text);
         add(player);
 
         FlxG.camera.setScrollBoundsRect(0, 0, tilemap.fullWidth, tilemap.fullHeight);
@@ -59,8 +68,16 @@ class LevelTest2 extends FlxState
     override public function update(elapsed:Float)
         {
             FlxG.collide(player, BlockTilesStr);
-		    FlxG.collide(player, C_ObjetosLoad);
-            super.update(elapsed);
-        }
+		for (obj in C_ObjetosLoad.members)
+		{
+			if (FlxG.pixelPerfectOverlap(player, obj))
+			{
+				trace("Me tocar0n");
+			}
+		}
+
+		FlxG.collide(player, C_ObjetosLoad);
+		super.update(elapsed);
+	}
 
 }

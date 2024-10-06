@@ -49,11 +49,11 @@
             }
         },
         "Nivel1_1.tmx": {
-            "scale": 1.5,
+            "scale": 1,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 469.66666666666663,
-                "y": 489.66666666666663
+                "x": 833.5,
+                "y": 402.5
             }
         },
         "Objetos.tsx": {
@@ -90,10 +90,10 @@
         },
         "TesteoPark.tmx": {
             "expandedObjectLayers": [
-                4,
-                6,
+                2,
                 3,
-                2
+                6,
+                4
             ],
             "scale": 1,
             "selectedLayer": 5,

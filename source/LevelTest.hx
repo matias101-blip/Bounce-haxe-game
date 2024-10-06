@@ -5,7 +5,6 @@ import flixel.addons.editors.tiled.TiledImageLayer;
 import flixel.addons.editors.tiled.TiledMap;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
-import lime.tools.Platform;
 import modules.LoadObjects.LoadObjects;
 
 class LevelTest extends FlxState
@@ -26,7 +25,7 @@ class LevelTest extends FlxState
 		Bg.loadGraphic(StringTools.replace(Image.imagePath, "..", "assets"));
 
 		// Se cargaran los edificios1
-		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos", "Escaleras"];
+		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Escaleras"];
 		var objetosLoad = LoadObjects("assets/data/TesteoPark.tmx", LayersE);
 		// Se carga el mapa de tilesmap
 		BlockTilesStr = new FlxTilemap();

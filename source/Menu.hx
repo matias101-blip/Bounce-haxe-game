@@ -9,14 +9,15 @@ import flixel.ui.FlxButton;
 class Menu extends FlxState{
     override public function create(){
         var PlayBtn:FlxButton;
-        PlayBtn = new FlxButton(0,0,"Hola!!!",klikeame);
+		PlayBtn = new FlxButton(0, 0, "Play!!!", click);
         PlayBtn.screenCenter();
         add(PlayBtn);
         super.create();
     };
 
-    function klikeame() {
-        FlxG.switchState(new LevelTest2());
+	function click()
+	{
+		FlxG.switchState(new LevelTest2());
     };
 
     override public function update(elapsed:Float) {
@@ -24,3 +25,6 @@ class Menu extends FlxState{
     };
 
 }
+
+
+

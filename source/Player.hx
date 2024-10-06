@@ -7,19 +7,22 @@ class Player extends FlxSprite
 {
 	static inline var SPEED:Float = 150;
 	static inline var GRAVITY:Int = 1100;
+
 	var run = new FlxSprite();
-    public function new(x:Float = 0, y:Float = 0) {
+
+	public function new(x:Float = 0, y:Float = 0)
+	{
 		super(x, y);
 		run = loadGraphic("assets/images/gato-run27x24.png", true, 27, 24); // 81x72
-        drag.x = drag.y = 800;
+		drag.x = drag.y = 800;
 		setFacingFlip(LEFT, true, false);
 		setFacingFlip(RIGHT, false, false);
 		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 15);
 		acceleration.y = GRAVITY;
 	}
-
 	function updateMovement()
 	{
+		var xd:String = "Hola";
 		var left:Bool = FlxG.keys.anyPressed([LEFT, A]);
 		var right:Bool = FlxG.keys.anyPressed([RIGHT, D]);
 		if (left && right)
