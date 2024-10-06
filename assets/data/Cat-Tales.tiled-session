@@ -110,26 +110,24 @@
     },
     "last.exportedFilePath": "C:/Users/USUARIO/Documents/GitHub/Bounce-haxe-game/assets/data",
     "last.imagePath": "/home/thehunter101/Documents/Developer-Software/haxe/Bounce-game/assets/images/objects/Other",
+    "map.height": 15,
     "map.lastUsedExportFilter": "Archivos CSV (*.csv)",
     "map.lastUsedFormat": "tmx",
-    "map.width": 32,
+    "map.width": 20,
     "openFiles": [
         "TesteoPark.tmx",
         "Nivel1_1.tmx"
     ],
     "project": "Cat-Tales.tiled-project",
     "recentFiles": [
+        "BG.tsx",
+        "Testeo.tmx",
         "TesteoPark.tmx",
         "Nivel1_1.tmx",
         "InterfazUsuario.tsx",
         "Menu.tmx",
         "Objetos.tsx",
         "Background.tsx",
-        "BG.tsx",
-        "Parque.tsx",
-        "GUI.tsx",
-        "Prueba.tmx",
-        "Testeo.tmx",
         "park.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
@@ -137,5 +135,5 @@
         "height": 32,
         "width": 32
     },
-    "tileset.type": 0
+    "tileset.type": 1
 }
