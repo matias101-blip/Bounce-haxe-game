@@ -16,7 +16,7 @@ class LevelTest extends FlxState
 	{
 		FlxG.mouse.visible = false;
 
-		player = new Player(20, 450);
+		player = new Player(0, 455);
 
 		final tilemap:TiledMap = new TiledMap("assets/data/TesteoPark.tmx");
 		// Se cargo el fondo del escenario :)
@@ -25,7 +25,7 @@ class LevelTest extends FlxState
 		Bg.loadGraphic(StringTools.replace(Image.imagePath, "..", "assets"));
 
 		// Se cargaran los edificios1
-		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Escaleras"];
+		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos", "Escaleras"];
 		var objetosLoad = LoadObjects("assets/data/TesteoPark.tmx", LayersE);
 		// Se carga el mapa de tilesmap
 		BlockTilesStr = new FlxTilemap();
@@ -44,6 +44,10 @@ class LevelTest extends FlxState
 	override public function update(elapsed:Float)
 	{
 		FlxG.collide(player, BlockTilesStr);
+		if (player.x < 0)
+		{
+			FlxG.switchState(new LevelTest2());
+		}
 		super.update(elapsed);
 	}
 }

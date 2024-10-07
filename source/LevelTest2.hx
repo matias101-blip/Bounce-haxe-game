@@ -5,10 +5,9 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.editors.tiled.TiledImageLayer;
 import flixel.addons.editors.tiled.TiledMap;
-import flixel.addons.editors.tiled.TiledObject;
-import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.text.FlxTypeText;
 import flixel.group.FlxGroup;
+import flixel.sound.FlxSound;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxCollision;
 import lime.tools.Platform;
@@ -21,11 +20,12 @@ class LevelTest2 extends FlxState
     var BlockTilesStr:FlxTilemap;
 	var C_ObjetosLoad:FlxTypedGroup<FlxSprite>;
     // Para las coliciones  definir aqui, con su tipo
+	var music:FlxSound = new FlxSound();
 
 	override public function create()
 	{
         //Se carga el jugadosr
-        player= new Player(0,0);
+		player = new Player(0, 455);
         //Se caraga el arch del mapa (TODO) tmx
         final tilemap:TiledMap = new TiledMap("assets/data/Nivel1_1.tmx");
         //obtengo el fondo 
@@ -50,6 +50,7 @@ class LevelTest2 extends FlxState
 		Text.prefix = "Matias: ";
 		Text.start();
 
+		FlxG.sound.playMusic("assets/music/anime.ogg", 0.3, true);
 		super.create();
 		// Cargar el jugador
         add(bg);
@@ -76,6 +77,10 @@ class LevelTest2 extends FlxState
 			}
 		}
 
+		if (player.x > FlxG.worldBounds.width || player.y > FlxG.worldBounds.height)
+		{
+			FlxG.switchState(new PlayState());
+		}
 		FlxG.collide(player, C_ObjetosLoad);
 		super.update(elapsed);
 	}

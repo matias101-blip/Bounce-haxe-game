@@ -8,21 +8,36 @@ class Player extends FlxSprite
 	static inline var SPEED:Float = 150;
 	static inline var GRAVITY:Int = 1100;
 
-	var run = new FlxSprite();
+	// Se designan los sprites sheets a cargar
+	final A_normal:String = "assets/images/normal-cat.png";
+	final A_run:String = "assets/images/run-cat.png";
+
+	// Estas var nos ayudaran a saber si el sprite se cargo.
+	var run:Bool = false;
+	var B_normal:Bool = true;
 
 	public function new(x:Float = 0, y:Float = 0)
 	{
+		// Cargamos el personaje, esta funcion se ejecuta una vez
 		super(x, y);
-		run = loadGraphic("assets/images/gato-run27x24.png", true, 27, 24); // 81x72
 		drag.x = drag.y = 800;
-		setFacingFlip(LEFT, true, false);
-		setFacingFlip(RIGHT, false, false);
-		run.animation.add("Caminar", [0, 1, 2, 3, 4, 5, 6], 15);
+		Animation("Normal", A_normal, [0, 1, 2, 3, 4, 5, 6], 6);
+		animation.play("Normal");
 		acceleration.y = GRAVITY;
 	}
+
+	function Animation(Name:String, RootImage:String, Frames:Array<Int>, FPS:Int)
+	{
+		// Esta funccion se encarga de manejar la carga de sprite y aniadir las
+		loadGraphic(RootImage, true, 32, 32);
+		animation.add(Name, Frames, FPS);
+		setFacingFlip(LEFT, true, false);
+		setFacingFlip(RIGHT, false, false);
+		setSize(28, 30);
+	}
+
 	function updateMovement()
 	{
-		var xd:String = "Hola";
 		var left:Bool = FlxG.keys.anyPressed([LEFT, A]);
 		var right:Bool = FlxG.keys.anyPressed([RIGHT, D]);
 		if (left && right)
@@ -43,16 +58,32 @@ class Player extends FlxSprite
 				facing = RIGHT;
 			}
 		}
-		else
+		var action:String = "Normal";
+		if (!isTouching(DOWN)) {}
+		else if (velocity.x > 0 || velocity.x < 0 && isTouching(DOWN))
 		{
-			run.animation.stop();
+			if (!run)
+			{
+				run = true;
+				B_normal = false;
+				action = "Run";
+				Animation("Run", A_run, [0, 1, 2, 3, 4, 5, 6], 15);
+			}
 		}
-		switch (facing)
+		else if (velocity.x == 0 && !B_normal)
 		{
-			case LEFT, RIGHT:
-				run.animation.play("Caminar");
-			default:
+			run = false;
+			B_normal = true;
+			Animation("Normal", A_normal, [0, 1, 2, 3, 4, 5, 6], 6);
 		}
+		switch (action)
+		{
+			case "Run":
+				animation.play(action);
+			case _:
+				animation.play(action);
+		}
+
 	}
 
 	function Jump()
@@ -60,6 +91,7 @@ class Player extends FlxSprite
 		var jump:Bool = FlxG.keys.anyPressed([SPACE, W]);
 		if (jump && isTouching(DOWN))
 		{
+			FlxG.sound.play("assets/music/sfx/jump.ogg", 1, false);
 			velocity.y = -GRAVITY / 3.5; // Ajuste para el salto
 		}
 	}
