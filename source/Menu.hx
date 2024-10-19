@@ -1,16 +1,23 @@
 package;
 //paguina para recortar = fotopia
+import flixel.util.FlxColor;
+import lime.app.Application;
+import openfl.desktop.NativeApplication;
+import openfl.system.System;
 import LevelTest2;
 import flixel.FlxG;
 import flixel.FlxSprite; // Se importa la clase Sprite
 import flixel.FlxState;
 import flixel.ui.FlxButton;
+import flixel.util.FlxTimer;
 
 class Menu extends FlxState{
+    var timer:FlxTimer= new FlxTimer();
     override public function create(){
         //Se crean variables de tipo Flx
         //Las imánes no pueden pasar de 640(ancho) x 480(Alto)
         //Me falta poner un fondo en 
+        
         var cuadro:FlxSprite=new FlxSprite();//Variable de tipo sprite y el new es un constructor de la clase sprite 
         var fondo:FlxSprite=new FlxSprite();
         //Aquí se configuranlos objetos
@@ -27,7 +34,7 @@ class Menu extends FlxState{
         //Aquí vana a ir los botones
         var boton1:FlxButton = new FlxButton(280,203, "Iniciar juego",saludar);
         var boton2:FlxButton = new FlxButton(280,231, "Niveles",niveles);
-        var boton3:FlxButton = new FlxButton(280,259, "Salir");
+        var boton3:FlxButton = new FlxButton(280,259, "Salir", salir);
         
         //PlayBtn.screenCenter();
         
@@ -48,7 +55,11 @@ class Menu extends FlxState{
         FlxG.switchState(new LevelTest2());//Cambiar de escenario -(Llamar a los escenarios)
     };
     function niveles(){
-        FlxG.switchState(new Niveles());
+        FlxG.camera.fade(FlxColor.BLACK,3,false,onFocus);
+        timer.start(3,function(timer:FlxTimer):Void{
+            FlxG.switchState(new Niveles());
+        });
+        
     };
 
 	function level()
@@ -59,6 +70,10 @@ class Menu extends FlxState{
     override public function update(elapsed:Float) {
         super.update(elapsed);
     };
+    function salir(){
+        Sys.exit(0);
+    };
+    
 
 }
 

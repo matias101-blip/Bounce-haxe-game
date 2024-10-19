@@ -18,7 +18,6 @@ class LevelTest2 extends PlayState
     var BlockTilesStr:FlxTilemap;
 	var C_ObjetosLoad:FlxTypedGroup<FlxSprite>;
 	// Para las coliciones  definir aqui, con su tipo
-	
 
 	override public function create()
 	{
