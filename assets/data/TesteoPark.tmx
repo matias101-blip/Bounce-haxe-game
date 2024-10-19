@@ -155,7 +155,7 @@
  </objectgroup>
  <layer id="7" name="Tiles" width="32" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUDBQoBOJqLJheQBELVqKj/cMZROAQj6OrK3C7g95g1B2oYDC4I2eAsTwQywCxDRbsjgNjU0sODkGyXw2IZaE0MsYmRoxcJg42MgbZrw613wgJ22LBIPFiPPbhsweXPMh+AKLvJnY=
+   eJxjYBgFo2AUDBQoBOJqLJheQBELVqKj/cMR+BOQj6OLKwi7g15g1B2oYLC4wxGIcwYYywOxDBDbYMHuODA2teTgECT71YBYFkojY2xixMhl4mAjY5D96lD7jZCwLRYMEi/GYx8+e3DJg+wHAJFHJoo=
   </data>
  </layer>
 </map>

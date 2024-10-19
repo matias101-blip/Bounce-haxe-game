@@ -4,6 +4,7 @@ import flixel.FlxSprite;
 import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.util.FlxColor;
 
 function LoadObjects(Rootmap:String, ObjectsLayer:Array<String>)
 {
@@ -22,6 +23,7 @@ function LoadObjects(Rootmap:String, ObjectsLayer:Array<String>)
 	}
 	return ObjectsGroup;
 }
+
 function LoadObjectsTouch(Rootmap:String, ObjectsLayer:Array<String>)
 {
 	var ObjectsGroup:FlxTypedGroup<FlxSprite> = new FlxTypedGroup<FlxSprite>();
@@ -31,9 +33,8 @@ function LoadObjectsTouch(Rootmap:String, ObjectsLayer:Array<String>)
 		var LayerObjects:TiledObjectLayer = cast(tilemap.getLayer(layer));
 		for (object in LayerObjects.objects)
 		{
-			var object_sprt:FlxSprite = new FlxSprite(object.x, object.y - object.height);
-			object_sprt.loadGraphic(object.properties.keys.get("ruta"));
-			object_sprt.setSize(object.width, object.height);
+			var object_sprt:FlxSprite = new FlxSprite(object.x, object.y);
+			object_sprt.makeGraphic(object.width, object.height, FlxColor.TRANSPARENT);
 			object_sprt.immovable = true;
 			ObjectsGroup.add(object_sprt);
 		}

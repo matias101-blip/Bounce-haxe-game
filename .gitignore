@@ -3,5 +3,7 @@
 *.log
 tmp/
 readme.org
+readme.tex
+readme.pdf
 .projectile
 export
