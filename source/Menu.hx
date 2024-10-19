@@ -3,15 +3,17 @@ package;
 import LevelTest2;
 import flixel.FlxG;
 import flixel.FlxState;
-import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 
 class Menu extends FlxState{
     override public function create(){
         var PlayBtn:FlxButton;
+		var Test:FlxButton;
+		Test = new FlxButton(0, 0, "Testeo", level);
 		PlayBtn = new FlxButton(0, 0, "Play!!!", click);
         PlayBtn.screenCenter();
         add(PlayBtn);
+		add(Test);
         super.create();
     };
 
@@ -20,6 +22,11 @@ class Menu extends FlxState{
 		FlxG.switchState(new LevelTest2());
     };
 
+	function level()
+	{
+		FlxG.switchState(new LevelTest());
+		PlayState.ActuallLevel = 1;
+	}
     override public function update(elapsed:Float) {
         super.update(elapsed);
     };

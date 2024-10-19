@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.input.gamepad.FlxGamepad;
 
 class Player extends FlxSprite
 {
@@ -11,13 +12,19 @@ class Player extends FlxSprite
 	// Se designan los sprites sheets a cargar
 	final A_normal:String = "assets/images/normal-cat.png";
 	final A_run:String = "assets/images/run-cat.png";
+	final A_sleep:String = "assets/images/sleep.png";
 
 	// Estas var nos ayudaran a saber si el sprite se cargo.
-	var run:Bool = false;
-	var B_normal:Bool = true;
+	public static var run:Bool;
+	public static var B_normal:Bool;
+	public static var Sleep:Bool;
 
+	var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 	public function new(x:Float = 0, y:Float = 0)
 	{
+		run = false;
+		B_normal = true;
+		Sleep = false;
 		// Cargamos el personaje, esta funcion se ejecuta una vez
 		super(x, y);
 		drag.x = drag.y = 800;
@@ -38,10 +45,22 @@ class Player extends FlxSprite
 
 	function updateMovement()
 	{
-		var left:Bool = FlxG.keys.anyPressed([LEFT, A]);
-		var right:Bool = FlxG.keys.anyPressed([RIGHT, D]);
-		if (left && right)
+		var left:Bool = false;
+		var right:Bool = false;
+
+		#if FLX_KEYBOARD
+		left = FlxG.keys.anyPressed([LEFT, A]);
+		right = FlxG.keys.anyPressed([RIGHT, D]);
+		#end
+
+		#if android
+		var virtualPad = PlayState.virtualPad;
+		left = left || virtualPad.buttonLeft.pressed;
+		right = right || virtualPad.buttonRight.pressed;
+		#end
+		if (left && right || LevelTest.meta)
 		{
+			trace("Hellow :)");
 			left = right = false;
 		}
 		// Mantén la velocidad de movimiento en la dirección actual
@@ -76,9 +95,17 @@ class Player extends FlxSprite
 			B_normal = true;
 			Animation("Normal", A_normal, [0, 1, 2, 3, 4, 5, 6], 6);
 		}
+		else if (Sleep)
+		{
+			Sleep = false;
+			Animation("mimir", A_sleep, [0, 1, 2], 4);
+			action = "mimir";
+		}
 		switch (action)
 		{
 			case "Run":
+				animation.play(action);
+			case "mimir":
 				animation.play(action);
 			case _:
 				animation.play(action);
@@ -88,8 +115,20 @@ class Player extends FlxSprite
 
 	function Jump()
 	{
-		var jump:Bool = FlxG.keys.anyPressed([SPACE, W]);
-		if (jump && isTouching(DOWN))
+		var jump:Bool = false;
+		#if FLX_KEYBOARD
+		jump = FlxG.keys.anyPressed([SPACE, W]);
+		#end
+
+		#if android
+		var virtualPad = PlayState.virtualPad;
+		jump = jump || virtualPad.buttonA.pressed;
+		#end
+		if (LevelTest.meta)
+		{
+			jump = false;
+		}
+		else if (jump && isTouching(DOWN))
 		{
 			FlxG.sound.play("assets/music/sfx/jump.ogg", 1, false);
 			velocity.y = -GRAVITY / 3.5; // Ajuste para el salto
