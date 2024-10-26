@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="65">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="71">
  <editorsettings>
   <export target="Nivel1_1.csv" format="csv"/>
  </editorsettings>
@@ -45,7 +45,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="6" name="Objetos">
+ <objectgroup id="6" name="Objetos" locked="1">
   <object id="8" gid="16" x="2" y="512" width="27" height="16">
    <properties>
     <property name="ruta" value="assets/images/objects/Stones/3.png"/>
@@ -131,8 +131,19 @@
   <object id="62" x="723.495" y="417.274" width="17.4416" height="95.5977"/>
   <object id="63" x="780.677" y="418.598" width="30.9092" height="93.6106"/>
   <object id="64" x="-0.347826" y="0.25" width="1.43116" height="639.583"/>
+  <object id="67" x="608.125" y="514" width="32" height="29.75"/>
+  <object id="69" x="416" y="416.273" width="8.54545" height="17.9091"/>
+  <object id="70" x="501.636" y="415.636" width="9.18182" height="15.0909"/>
  </objectgroup>
- <layer id="7" name="Tiles" width="32" height="20">
+ <objectgroup id="10" name="Obstacle">
+  <object id="65" x="528.667" y="498.333" width="33.3333" height="33.6667">
+   <ellipse/>
+  </object>
+  <object id="68" x="449.055" y="397.542" width="33.3333" height="33.6667">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <layer id="7" name="Tiles" width="32" height="20" locked="1">
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2AUjIJRMNRBwRCwlxpuTAXiNCBOJ1P/QIXTYAQ5A4zlgVgGiG2wYHccGJtacnAIkv1qQCwLpZExNjFi5DJxsJExyH51qP1GSNgWCwaJF+OxD589uORB9gMAF+cjsw==
   </data>

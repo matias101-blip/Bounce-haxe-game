@@ -5,6 +5,7 @@ import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.util.FlxColor;
+import objects.HitBox;
 
 function LoadObjects(Rootmap:String, ObjectsLayer:Array<String>)
 {
@@ -33,8 +34,7 @@ function LoadObjectsTouch(Rootmap:String, ObjectsLayer:Array<String>)
 		var LayerObjects:TiledObjectLayer = cast(tilemap.getLayer(layer));
 		for (object in LayerObjects.objects)
 		{
-			var object_sprt:FlxSprite = new FlxSprite(object.x, object.y);
-			object_sprt.makeGraphic(object.width, object.height, FlxColor.TRANSPARENT);
+			var object_sprt:HitBox = new HitBox(object.x, object.y, object.width, object.height);
 			object_sprt.immovable = true;
 			ObjectsGroup.add(object_sprt);
 		}

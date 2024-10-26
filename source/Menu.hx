@@ -1,14 +1,11 @@
 package;
-//paguina para recortar = fotopia
-import flixel.util.FlxColor;
-import lime.app.Application;
-import openfl.desktop.NativeApplication;
-import openfl.system.System;
+// paguina para recortar = fotopia
 import LevelTest2;
 import flixel.FlxG;
 import flixel.FlxSprite; // Se importa la clase Sprite
 import flixel.FlxState;
 import flixel.ui.FlxButton;
+import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
 class Menu extends FlxState{

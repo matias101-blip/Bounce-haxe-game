@@ -1,0 +1,166 @@
+digraph graphname {
+	node [shape=plaintext];
+n317722[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317722) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317721[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317721) BKFunctionBegin</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317720[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317720) BKNormal</td></tr>
+	<tr><td port="e0" align="left">this.collision = true</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317719[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317719) BKConditional</td></tr>
+	<tr><td port="e0" align="left">Player.life = Player.life - 1</td></tr>
+	<tr><td port="e1" align="left">var tmp = LevelTest2.Bar_life_gui</td></tr>
+	<tr><td port="e2" align="left">var tmp = LevelTest2.Bar_life_gui.members</td></tr>
+	<tr><td port="e3" align="left">var tmp = LevelTest2.Bar_life_gui.length - 1</td></tr>
+	<tr><td port="e4" align="left">var tmp = tmp[tmp]</td></tr>
+	<tr><td port="e5" align="left">tmp.remove(tmp, null)</td></tr>
+	<tr><td port="e6" align="left">haxe.Log.trace(Player.life, {fileName : \"source/LevelTest2.hx\", lineNumber : 122, className : \"LevelTest2\", methodName : \"update\"})</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317718[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317718) BKConditional</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317717[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317717) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var tmp = ! this.collision</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317716[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317716) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var obstacle = obstacle.next()</td></tr>
+	<tr><td port="e1" align="left">var tmp = flixel.util.FlxCollision.pixelPerfectCheck(this.player, obstacle, null, null)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317715[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317715) BKConditional</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317714[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317714) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var tmp = ! ((obstacle.hasNext()))</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317713[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317713) BKLoopHead</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317712[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317712) BKSub</td></tr>
+	<tr><td port="e0" align="left">var _this = this.obstacleGroup</td></tr>
+	<tr><td port="e1" align="left">var filter = null</td></tr>
+	<tr><td port="e2" align="left">var obstacle = new flixel.group.FlxTypedGroupIterator(_this.members, filter)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317711[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317711) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317710[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317710) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317709[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317709) BKNormal</td></tr>
+	<tr><td port="e0" align="left">flixel.FlxG.game._state.startOutro(\"fun\"(317704))</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317708[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317708) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317707[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317707) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var _this = flixel.FlxG.log</td></tr>
+	<tr><td port="e1" align="left">_this.advanced(cast \"`onOutroComplete` was called after the state was switched. This will be ignored\", flixel.system.debug.log.LogStyle.WARNING, true)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317706[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317706) BKConditional</td></tr>
+	<tr><td port="e0" align="left">flixel.FlxG.game._nextState = nextState</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317705[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317705) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317704[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317704) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var tmp = flixel.FlxG.game._state == stateOnCall</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317703[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317703) BKConditional</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317702[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317702) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317701[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317701) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = true</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317700[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317700) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = flixel.FlxG.canSwitchTo(cast nextState)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317699[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317699) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var nextState = @:implicitCast flixel.util.typeLimit._NextState.NextState_Impl_.fromState(new LevelTest())</td></tr>
+	<tr><td port="e1" align="left">var stateOnCall = flixel.FlxG.game._state</td></tr>
+	<tr><td port="e2" align="left">var tmp</td></tr>
+	<tr><td port="e3" align="left">var tmp = ! ! Std.isOfType(cast nextState, flixel.FlxState)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317698[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317698) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317697[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317697) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = true</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317696[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317696) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = this.player.y &gt; flixel.FlxG.worldBounds.height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317695[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317695) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var tmp</td></tr>
+	<tr><td port="e1" align="left">var tmp = ! this.player.x &gt; flixel.FlxG.worldBounds.width</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317694[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317694) BKSub</td></tr>
+	<tr><td port="e0" align="left">var objectOrGroup1 = this.player</td></tr>
+	<tr><td port="e1" align="left">var objectOrGroup2 = this.BlockTilesStr</td></tr>
+	<tr><td port="e2" align="left">var notifyCallback = null</td></tr>
+	<tr><td port="e3" align="left">flixel.FlxG.overlap(objectOrGroup1, objectOrGroup2, notifyCallback, flixel.FlxObject.separate)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317693[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317693) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n317692[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(317692) BKFunctionBegin</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(1) BKRoot</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1:out -> n317692:in[label="CFGFunction"];
+}

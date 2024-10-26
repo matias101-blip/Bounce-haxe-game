@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.input.gamepad.FlxGamepad;
+import haxe.Timer;
 
 class Player extends FlxSprite
 {
@@ -13,15 +14,20 @@ class Player extends FlxSprite
 	final A_normal:String = "assets/images/normal-cat.png";
 	final A_run:String = "assets/images/run-cat.png";
 	final A_sleep:String = "assets/images/sleep.png";
+	final A_Died:String = "assets/images/died_1.png";
 
 	// Estas var nos ayudaran a saber si el sprite se cargo.
 	public static var run:Bool;
 	public static var B_normal:Bool;
 	public static var Sleep:Bool;
+	public static var life:Int = 4;
 
+	var died:Bool;
 	var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
+
 	public function new(x:Float = 0, y:Float = 0)
 	{
+		died = false;
 		run = false;
 		B_normal = true;
 		Sleep = false;
@@ -31,16 +37,28 @@ class Player extends FlxSprite
 		Animation("Normal", A_normal, [0, 1, 2, 3, 4, 5, 6], 6);
 		animation.play("Normal");
 		acceleration.y = GRAVITY;
+
 	}
 
-	function Animation(Name:String, RootImage:String, Frames:Array<Int>, FPS:Int)
+	function Animation(Name:String, RootImage:String, Frames:Array<Int>, FPS:Int, Loop:Bool = true)
 	{
 		// Esta funccion se encarga de manejar la carga de sprite y aniadir las
 		loadGraphic(RootImage, true, 32, 32);
-		animation.add(Name, Frames, FPS);
+		animation.add(Name, Frames, FPS, Loop);
 		setFacingFlip(LEFT, true, false);
 		setFacingFlip(RIGHT, false, false);
 		setSize(28, 30);
+	}
+
+	public function Died()
+	{
+		died = true;
+		acceleration.y = 0;
+		Animation("Died", A_Died, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 4, false);
+		animation.play("Died");
+		FlxG.sound.music.stop();
+		scale.set(2, 2);
+		trace(animation.finish);
 	}
 
 	function updateMovement()
@@ -58,9 +76,8 @@ class Player extends FlxSprite
 		left = left || virtualPad.buttonLeft.pressed;
 		right = right || virtualPad.buttonRight.pressed;
 		#end
-		if (left && right || LevelTest.meta)
+		if (left && right || LevelTest.meta || died)
 		{
-			trace("Hellow :)");
 			left = right = false;
 		}
 		// Mantén la velocidad de movimiento en la dirección actual
@@ -110,7 +127,6 @@ class Player extends FlxSprite
 			case _:
 				animation.play(action);
 		}
-
 	}
 
 	function Jump()
@@ -137,6 +153,13 @@ class Player extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
+		if (life == 0)
+		{
+			life = 4;
+			trace("Te moriste wey");
+			this.kill();
+			FlxG.switchState(new GameOver());
+		}
 		Jump();
 		updateMovement();
 		super.update(elapsed);

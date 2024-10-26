@@ -17,7 +17,8 @@ class LevelTest extends PlayState
 	var BlockTilesStr:FlxTilemap;
 	var cama:Cama;
 	var timer:FlxTimer = new FlxTimer();
-
+	var ObstaclesGroup:FlxTypedGroup<FlxSprite> = new FlxTypedGroup();
+	var tilemap:TiledMap;
 	public static var meta:Bool;
 
 	override public function create()
@@ -31,7 +32,7 @@ class LevelTest extends PlayState
 		FlxG.cameras.add(PlayState.cameraPlayer);
 		FlxG.cameras.add(PlayState.CameraHud);
 
-		final tilemap:TiledMap = new TiledMap("assets/data/TesteoPark.tmx");
+		tilemap = new TiledMap("assets/data/TesteoPark.tmx");
 		// Se cargo el fondo del escenario :)
 		var Image:TiledImageLayer = cast(tilemap.getLayer("Fondo"));
 		var Bg:FlxSprite = new FlxSprite(Image.x, Image.y);
@@ -55,7 +56,10 @@ class LevelTest extends PlayState
 		add(BlockTilesStr);
 		add(cama);
 		add(player);
-		add(PlayState.virtualPad);
+		MakeBarLife();
+		#if android
+		addPad();
+		#end
 	}
 
 	override public function update(elapsed:Float)
@@ -83,6 +87,10 @@ class LevelTest extends PlayState
 		{
 			FlxG.switchState(new LevelTest2());
 		}
+		if (player.x > tilemap.fullWidth)
+		{
+			Player.life = 0;
+		}
 		FlxG.collide(player, BlockTilesStr);
 		super.update(elapsed);
 	}
@@ -93,7 +101,9 @@ class LevelTest extends PlayState
 		{
 			FlxG.switchState(new Menu());
 			player.kill();
+			#if desktop
 			FlxG.mouse.visible = true;
+			#end
 		}, 1);
 	}
 }

@@ -4,19 +4,25 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.editors.tiled.TiledImageLayer;
 import flixel.addons.editors.tiled.TiledMap;
+import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.text.FlxTypeText;
 import flixel.group.FlxGroup;
-import flixel.sound.FlxSound;
 import flixel.tile.FlxTilemap;
+import flixel.util.FlxCollision;
 import flixel.util.FlxColor;
+import haxe.Timer;
 import modules.LoadObjects.LoadObjects;
 import modules.LoadObjects.LoadObjectsTouch;
+import objects.Shuriken;
 
 class LevelTest2 extends PlayState
 {
     var player:Player;
     var BlockTilesStr:FlxTilemap;
 	var C_ObjetosLoad:FlxTypedGroup<FlxSprite>;
+	var obstacleGroup:FlxTypedGroup<FlxSprite>;
+	var collision = false;
+
 	// Para las coliciones  definir aqui, con su tipo
 
 	override public function create()
@@ -37,55 +43,68 @@ class LevelTest2 extends PlayState
 		var bg:FlxSprite = new FlxSprite(Image.x, Image.y);
         bg.loadGraphic(StringTools.replace(Image.imagePath,"..","assets"));
 
+		final CollisionObj = ["Colision"];
+		C_ObjetosLoad = LoadObjectsTouch("assets/data/Nivel1_1.tmx", CollisionObj); // Funcion que carga objetos, en colision.
+
+		var obstacle:TiledObjectLayer = cast(tilemap.getLayer("Obstacle"));
+		obstacleGroup = new FlxTypedGroup<FlxSprite>();
+		for (object in obstacle.objects)
+		{
+			var shuiken = new Shuriken(object.x, object.y, C_ObjetosLoad);
+			obstacleGroup.add(shuiken);
+		}
+		
         //Carga de objetos 
 		PlayState.cameraPlayer.setScrollBoundsRect(0, 0, tilemap.fullWidth, tilemap.fullHeight);
 		final LayersE = ["Edificios1", "Edificios2", "Arboles", "Objetos"]; // Arreglo con las capas que se cargaran, tener orden
 		var objetosLoad = LoadObjects("assets/data/Nivel1_1.tmx", LayersE); // Funcion que carga objetos en segundo plano
-		final CollisionObj = ["Colision"];
-		C_ObjetosLoad = LoadObjectsTouch("assets/data/Nivel1_1.tmx", CollisionObj);// Funcion que carga objetos, en colision.
 
         BlockTilesStr = new FlxTilemap();
         BlockTilesStr.loadMapFromCSV("assets/data/Nivel1_1.csv","assets/images/tiles/park.png",32,32);
 		FlxG.worldBounds.set(0, 0, tilemap.fullWidth, tilemap.fullHeight); // Limites del mundo, todo lo que esta en el limite se puede ver y mover
 
-		// Carga de dialogo.
-		var Box:FlxSprite = new FlxSprite(20, 450);
-		Box.makeGraphic(130, 20, FlxColor.BLACK);
-		var Text:FlxTypeText = new FlxTypeText(20, 450, 130, "Hola este es mi texto", 9);
-		Text.font = "fonts/silver.ttf";
-		Text.prefix = "Matias: ";
-		Text.start();
-
 		FlxG.sound.playMusic("assets/music/anime.ogg", 0.3, true);
 		FlxG.sound.music.fadeIn(3);
-		for (obj in [bg, objetosLoad, C_ObjetosLoad, BlockTilesStr, Text, Box])
+		for (obj in [bg, objetosLoad, C_ObjetosLoad, BlockTilesStr, obstacleGroup])
 		{
 			obj.cameras = [PlayState.cameraPlayer];
 		}
+
 		// Cargar el jugador
 		add(bg);
 		add(objetosLoad);
 		add(C_ObjetosLoad);
+		add(obstacleGroup);
 		add(BlockTilesStr);
-		add(Box);
-		add(Text);
 		add(player);
-		add(PlayState.virtualPad);
+		MakeBarLife();
+		#if android
+		addPad();
+		#end
 	}
     override public function update(elapsed:Float)
         {
-            FlxG.collide(player, BlockTilesStr);
-		for (obj in C_ObjetosLoad.members)
-		{
-			if (FlxG.pixelPerfectOverlap(player, obj))
-			{
-				trace("Me tocar0n");
-			}
-		}
-
+		FlxG.collide(player, BlockTilesStr);
 		if (player.x > FlxG.worldBounds.width || player.y > FlxG.worldBounds.height)
 		{
 			FlxG.switchState(new LevelTest());
+		}
+
+		// Verificacion de coliciones con el obstaculo
+		for (obstacle in obstacleGroup)
+		{
+			if (FlxCollision.pixelPerfectCheck(player, obstacle) && !collision)
+			{
+				Player.life = Player.life - 1;
+				PlayState.Bar_life_gui.members.remove(PlayState.Bar_life_gui.members[PlayState.Bar_life_gui.members.length - 1]);
+				player.velocity.x = -200;
+				player.velocity.y = -600 / 3.5;
+				collision = true;
+				Timer.delay(function()
+				{
+					collision = false;
+				}, 3000);
+			}
 		}
 		FlxG.collide(player, C_ObjetosLoad);
 		super.update(elapsed);
