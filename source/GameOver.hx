@@ -20,7 +20,7 @@ class GameOver extends PlayState
 		TextGameOver = new FlxText(230, 178, 210, "You Died", 40);
 		TextGameOver.font = "fonts/silver.ttf";
 		TextGameOver.addFormat(format1, 0, 9);
-		#if desktop
+		#if (desktop || html5)
 		Timer.delay(function()
 		{
 			FlxG.mouse.visible = true;

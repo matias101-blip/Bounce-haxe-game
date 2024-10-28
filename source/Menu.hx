@@ -29,9 +29,11 @@ class Menu extends FlxState{
         cuadro.scale.set(4,4);//Con scale le estoy diciendo la escala y con set la estoy cambiando
 
         //Aquí vana a ir los botones
-        var boton1:FlxButton = new FlxButton(280,203, "Iniciar juego",saludar);
+		var boton1:FlxButton = new FlxButton(280, 203, "Iniciar juego", Start);
         var boton2:FlxButton = new FlxButton(280,231, "Niveles",niveles);
+		#if desktop
         var boton3:FlxButton = new FlxButton(280,259, "Salir", salir);
+		#end
         
         //PlayBtn.screenCenter();
         
@@ -42,13 +44,15 @@ class Menu extends FlxState{
         add(cuadro);//Se añade el cuadro al escenario, (renderizando)
         add(boton1);
         add(boton2);
+		#if desktop
         add(boton3);
-        //add(PlayBtn);
+		#end
         
         super.create();
     };
     
-    function saludar(){
+	function Start()
+	{
         FlxG.switchState(new LevelTest2());//Cambiar de escenario -(Llamar a los escenarios)
     };
     function niveles(){
@@ -67,9 +71,11 @@ class Menu extends FlxState{
     override public function update(elapsed:Float) {
         super.update(elapsed);
     };
+	#if desktop
     function salir(){
         Sys.exit(0);
     };
+	#end
     
 
 }

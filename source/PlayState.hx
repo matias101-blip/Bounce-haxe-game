@@ -45,9 +45,6 @@ class PlayState extends FlxState
 		FlxG.mouse.visible = false;
 		#end
 
-		// Cargar el jugador
-		trace(ActuallLevel);
-
 	}
 
 	public function MakeBarLife()
@@ -56,7 +53,6 @@ class PlayState extends FlxState
 		var x_heart:Int = 0;
 		for (i in 0...Player.life)
 		{
-			trace("Hola" + x_heart);
 			life_gui = new FlxSprite(10 + x_heart, 8);
 			life_gui.loadGraphic("assets/images/gui/heart.png", false, 16, 16);
 			life_gui.scale.set(1.5, 1.5);
@@ -65,11 +61,6 @@ class PlayState extends FlxState
 		}
 		Bar_life_gui.camera = CameraHud;
 		FlxG.state.add(Bar_life_gui);
-	}
-
-	function hola()
-	{
-		trace("Holis");
 	}
 
 	public function addPad()
